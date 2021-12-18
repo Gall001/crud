@@ -22,6 +22,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Route::get('users', 'App\Http\Controllers\UsersController@index')->name('users.index');
-
 Route::get('/user', [UserController::class, 'index']);
+Route::delete('/user/{user}', [UserController::class, 'destroy']);
+Route::get('/user/{user}/edit', [UserController::class, 'edit']);
+Route::put('/user/{user}', [UserController::class, 'update']);
+Route::get('/user/{user}/detail', [UserController::class, 'detail']);
