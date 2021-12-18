@@ -8,7 +8,10 @@
                 <div class="card-header">{{ __('List of Users') }}</div>
 
                 <div class="card-body">
-                <a href="/user">Users List!</a>
+                <a href="/user">Users List! (not finished)</a>
+                </div>
+                <div class="card-body">
+                <a href="/contacts">Contact List!</a>
                 </div>
             </div>
         </div>

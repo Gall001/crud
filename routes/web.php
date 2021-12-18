@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,14 @@ Route::delete('/user/{user}', [UserController::class, 'destroy']);
 Route::get('/user/{user}/edit', [UserController::class, 'edit']);
 Route::put('/user/{user}', [UserController::class, 'update']);
 Route::get('/user/{user}/detail', [UserController::class, 'detail']);
+
+Route::get('/contacts', [ContactController::class, 'index']);
+Route::post('/contacts', [ContactController::class, 'store']);
+Route::get('/contacts/create', [ContactController::class, 'create']);
+Route::get('/contacts/{contact}/edit', [ContactController::class, 'edit']);
+Route::put('/contacts/{contact}', [ContactController::class, 'update']);
+Route::delete('/contacts/{contact}', [ContactController::class, 'destroy']);
+Route::get('/contacts/{user}/detail', [ContactController::class, 'detail']);
+
+
+

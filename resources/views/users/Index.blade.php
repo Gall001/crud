@@ -20,6 +20,15 @@
                         @endauth
                     @endif
 
+                    @if (Route::has('login'))
+                        @auth
+                            <form method="POST" action="{{$user->id}}">
+                                @csrf
+                                @method('DELETE')
+                                <button class="bg-red-500 tracking-wide text-white px-6 py-2 inline-block mb-6 shadow-1g rounded hover:shadow">Delete</button>
+                            </form>
+                        @endauth
+                    @endif
                     </div>
 
                     </article>
