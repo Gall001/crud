@@ -35,7 +35,7 @@ Route::get('/contacts/create', [ContactController::class, 'create']);
 Route::get('/contacts/{contact}/edit', [ContactController::class, 'edit']);
 Route::put('/contacts/{contact}', [ContactController::class, 'update']);
 Route::delete('/contacts/{contact}', [ContactController::class, 'destroy']);
-Route::get('/contacts/{user}/detail', [ContactController::class, 'detail']);
+Route::get('/contacts/{contact}/detail', [ContactController::class, 'detail']);
 
 
 
